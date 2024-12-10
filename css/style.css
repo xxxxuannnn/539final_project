@@ -1,0 +1,724 @@
+
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    
+    
+
+  }
+  .home_body{
+    background-image: url('../images/background.jpg'); /* 替换为你的图片路径 */
+    background-size: cover; /* 图片铺满整个页面 */
+    background-position: center; /* 图片居中 */
+    background-repeat: repeat; /* 不重复 */
+  }
+
+  /* header */
+  header {
+    background: rgba(51, 51, 51, 0);
+    color: white;
+    font-weight: bold;
+    padding: 1em 0;
+    text-align: right;
+    
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  nav{
+  position: fixed;  /* 固定定位 */
+  top: 10px;           /* 距离页面顶部 0 像素 */
+  left: 0;          /* 距离页面左侧 0 像素 */
+  width: 100%;
+  z-index:100;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    color:white;
+    text-decoration: none;
+    text-shadow: 4px 4px 4px #aaa;
+    font-family: "Lucida Console",Arial, Helvetica, sans-serif;
+  }
+  
+  nav a:hover {
+    color: white;
+    font-style: italic;
+  }
+  nav a:focus {
+    text-decoration: underline;
+  }
+  
+  .skip a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: white;
+}
+
+.skip a:focus {
+  top: 20px;
+  z-index: 1000000;
+}
+
+
+  /* main */
+  .bg-pic{
+    text-align: center;
+    height: 100vh;
+    position: relative;
+  }
+  .active{
+    font-weight: 800px;         /* Bold text for the active link */
+    border-radius: 5px;  
+    font-size: 20px;
+    font-style: italic;
+
+  }
+
+
+
+  .part1{
+    color:white;
+    margin-left:40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:5vh;
+    width: 100%;
+    z-index: 10;
+    margin-top: 10px;
+    font-family: "Papyrus", Arial, sans-serif;
+    font-size: 35px;
+  }
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+    margin: 10px auto;
+    margin-top: 10px;
+  }
+  
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    position: relative;
+    height: 65%; /* 设置最小高度，确保有空间显示内容 */
+ 
+  }
+  
+  .carousel-slide {
+    min-width: 300px;
+    margin: 0 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 1;
+    transform: translateX(55%);
+  }
+  
+  .carousel-slide img {
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    opacity: 1; /* 默认完全不透明 */
+  
+  }
+  
+   /* 图片悬停变大 */
+.flip-card:hover:not(.flipped) .flip-card-front img {
+  transform: scale(1.2);  
+  opacity: 1;
+}   
+.flip-card:focus {
+  transform: scale(1.2);  
+  opacity: 1;
+}
+
+  /* Flip card container */
+.flip-card {
+  width: 300px;
+  height: 100%;
+  perspective: 1000px; /* 设置透视效果 */
+}
+
+/* Inner wrapper for the card */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Flip the card when clicked */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back sides */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* 隐藏背面内容 */
+  border-radius: 10px;
+  background-color: transparent; /* 确保背景透明 */
+}
+
+/* Front side */
+.flip-card-front {
+  background-color: transparent;
+}
+
+/* Back side */
+.flip-card-back {
+  background: #333;
+  color: white;
+  transform: rotateY(180deg); /* 翻转背面 */
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 10px;
+  margin:2px;
+  padding: 10px 15px; /* 给段落加一些内边距，使得上下有间隔 */
+  text-align: center; /* 可选，调整文本居中 */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../images/card_back.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片铺满整个页面 */
+  background-position: center; /* 图片居中 */
+  background-repeat: repeat; /* 不重复 */
+}
+.flip-card-back p{
+  font-family: "Georgia", Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+
+}
+.flip-card-back p:nth-of-type(2){
+ 
+  text-align: justify;
+}
+
+
+
+  .movie-title{
+    color:white
+  }
+  
+  
+  #movie-description {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+  }
+
+  #magic{
+    position: fixed; /* 固定在视窗中央 */
+    top: 50%; /* 距离视窗顶部50% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-family: "Sofia", Arial, Helvetica, sans-serif;
+    font-size: 90px;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #aaa;
+    transition: opacity 0.5s ease; /* 平滑过渡效果 */
+    z-index: 1;
+          
+
+  }
+  
+  .arrows-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom:5vh;
+    width: 100%;
+    z-index: 1;
+    margin-top: 10px;
+}
+  .arrow:focus{
+    transform: scale(1.2);      
+  }
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.arrow-left {
+    margin-right: 10px;
+}
+.carousel2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 80%;
+  margin: 10px auto;
+  margin-top: 10px;
+}
+
+
+.grid-container-home{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  position:relative;
+  
+   
+}
+.part2{
+  color:white;
+  margin-left:40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  margin-top: 10px;
+  font-family: "Papyrus", Arial, sans-serif;
+  font-size:35px;
+}
+
+.book {
+  perspective: 1000px;
+  cursor: pointer;
+  font-family: "Georgia", Arial, Helvetica, sans-serif;
+
+}
+
+.flip {
+  width: 200px;
+  height: 300px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.book:hover .flip {
+  transform: scale(1.2);
+}
+
+.book:focus .flip {
+  transform: scale(1.2);
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Georgia", Arial, Helvetica, sans-serif;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  font-family: "Georgia", Arial, Helvetica, sans-serif;
+}
+
+.modal-content {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 60%;
+  height: 50%;
+  
+}
+
+.modal-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-right {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.close {
+  position:relative;
+  top: 0px;
+  right:-95%;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  z-index: 20;  
+}
+.modal  .close:focus {
+  text-decoration: underline;
+}
+.modal .close:hover {
+  transform: scale(1.2) 
+}
+
+
+
+/* four school */
+.gryffindor_body{
+  
+  background-image: url('../images/bg_red.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片铺满整个页面 */
+  background-position: center; /* 图片居中 */
+  background-repeat: repeat; /* 不重复 */
+  
+}
+.gryffindor_head {
+  background-image: url('../images/head_red.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片覆盖整个页面 */
+  background-position: top left; /* 背景图片对齐页面的左上角 */
+  background-repeat: no-repeat; /* 不重复 */
+  height: 100vh; /* 背景图片高度占满整个视口 */
+  width: 100%; /* 宽度占满整个页面 */
+}
+.hufflepuff_body{
+  background-image: url('../images/bg_yellow.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片铺满整个页面 */
+  background-position: center; /* 图片居中 */
+  background-repeat: repeat; /* 不重复 */
+}
+.hufflepuff_head {
+  background-image: url('../images/head_yellow.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片覆盖整个页面 */
+  background-position: top left; /* 背景图片对齐页面的左上角 */
+  background-repeat: no-repeat; /* 不重复 */
+  height: 100vh; /* 背景图片高度占满整个视口 */
+  width: 100%; /* 宽度占满整个页面 */
+}
+.ravenclaw_body{
+  
+  background-image: url('../images/bg_blue.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片铺满整个页面 */
+  background-position: center; /* 图片居中 */
+  background-repeat: repeat; /* 不重复 */
+  
+}
+.ravenclaw_head {
+  background-image: url('../images/head_blue.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片覆盖整个页面 */
+  background-position: top left; /* 背景图片对齐页面的左上角 */
+  background-repeat: no-repeat; /* 不重复 */
+  height: 100vh; /* 背景图片高度占满整个视口 */
+  width: 100%; /* 宽度占满整个页面 */
+}
+.slytherin_body{
+  
+  background-image: url('../images/bg_green.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片铺满整个页面 */
+  background-position: center; /* 图片居中 */
+  background-repeat: repeat; /* 不重复 */
+  
+}
+.slytherin_head {
+  background-image: url('../images/head_green.JPG'); /* 替换为你的图片路径 */
+  background-size: cover; /* 图片覆盖整个页面 */
+  background-position: top left; /* 背景图片对齐页面的左上角 */
+  background-repeat: no-repeat; /* 不重复 */
+  height: 100vh; /* 背景图片高度占满整个视口 */
+  width: 100%; /* 宽度占满整个页面 */
+}
+
+
+
+
+
+
+
+
+
+
+
+.school_title {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 100vh; /* 高度占满整个视口 */
+  font-size: 100px; /* 根据需要调整字体大小 */
+  text-align: center; /* 使文本居中 */
+  color:white;
+  font-family: "Georgia", Arial, sans-serif;
+}
+.slogan_container{
+  display: flex;
+  
+  justify-content: center;
+  align-content: center;
+}
+.slogan {
+  display: block;
+  flex-direction: column; /* 垂直排列 */
+  justify-content: center;
+  align-content: center;
+  width:75%;
+  font-size: 40px;
+  color:white;
+  text-align: center;
+
+}
+.school_slogan {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  font-size: 40px; /* 根据需要调整字体大小 */
+  text-align: center; /* 使文本居中 */
+  color:white;
+  margin:0;
+  font-family: "Papyrus", Arial, sans-serif;
+}
+.sort_hat{
+  text-align: end;
+  color:white;
+  margin:0;
+  font-family: "Papyrus", Arial, sans-serif;
+}
+.Part_seperate{
+  color:white;
+  text-align: center;
+  margin-top:100px ;
+  /* border-bottom: solid black; */
+  font-size: 35px;
+  font-family: "Papyrus", Arial, sans-serif;
+}
+
+
+.founder-section {
+  display: flex;
+  align-items: center; /* 垂直居中图片和文字 */
+  justify-content: center; /* 内容水平居中 */
+  gap: 20px; /* 图片和文字之间的间距 */
+  padding: 20px;
+  margin:20px 20%;
+  border-radius: 10px; /* 边框圆角 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+
+.founder-image img {
+  width: 200px; /* 图片宽度 */
+  height: auto; /* 保持图片比例 */
+  border-radius: 10px; /* 圆角图片 */
+  object-fit: cover; /* 确保图片内容完全填充 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 图片阴影 */
+}
+
+.founder-description {
+  max-width: 600px; /* 限制文字描述宽度 */
+  font-family: "Georgia", Arial, sans-serif;
+}
+
+.founder-description h2 {
+  font-size: 24px;
+  color:white; /* 标题颜色 */
+  margin-bottom: 10px;
+}
+
+.founder-description p {
+  font-size: 16px;
+  color: white; /* 文字颜色 */
+  text-align: justify; /* 两端对齐 */
+  line-height: 1.6; /* 行距 */
+}
+
+.founder-description::-webkit-scrollbar-track {
+  background: transparent; /* 滚动条背景透明 */
+}
+
+.founder-description::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); /* 滚动条的滑块颜色半透明 */
+  border-radius: 5px; /* 滑块圆角 */
+}
+
+.founder-description::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7); /* 滑块在悬停时更深 */
+}
+.founder-description p::-webkit-scrollbar{
+  width: 8px;               /* 滚动条的宽度 */
+  background-color:#811f1f; /* 滚动条的背景颜色 */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 一行三列 */
+  gap: 0; /* 没有缝隙 */
+  padding: 10px;
+  font-family: "Georgia", Arial, sans-serif;
+}
+.grid-container-small{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 一行三列 */
+  gap: 0; /* 没有缝隙 */
+  padding: 0px;
+  margin:25px;
+  border-radius: 10px;
+  height:300px;
+
+}
+.red{
+  background-color: #742222;
+}
+.yellow{
+  background-color: #bd8815fe;
+}
+.blue{
+  background-color: #344669ef
+}
+.green{
+  background-color: #374b37;
+}
+  
+
+.grid-item {
+  text-align: center;
+  padding: 10px;
+}
+
+.grid-pic {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px; /* 圆角效果 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  margin:0px;
+}
+
+.grid-container p {
+
+  color: white;
+  
+}
+
+.person_desc{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin:5px;
+  padding:10px;
+  overflow-y: auto; /* 超出内容时垂直滚动 */
+  overflow-x: hidden; /* 禁止水平滚动 */
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+  font-family: "Georgia", Arial, sans-serif;
+}
+
+.person_desc::-webkit-scrollbar-track {
+  background: transparent; /* 滚动条背景透明 */
+}
+
+.person_desc::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); /* 滚动条的滑块颜色半透明 */
+  border-radius: 5px; /* 滑块圆角 */
+}
+
+.person_desc::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7); /* 滑块在悬停时更深 */
+}
+
+.person_desc::-webkit-scrollbar {
+  width: 8px;               /* 滚动条的宽度 */
+}
+.red::-webkit-scrollbar {   
+  background-color: #742222; /* 滚动条的背景颜色 */
+}
+.yellow::-webkit-scrollbar {   
+  background-color: #bd8815fe; /* 滚动条的背景颜色 */
+}
+.blue::-webkit-scrollbar {   
+  background-color: #344669ef; /* 滚动条的背景颜色 */
+}
+.green::-webkit-scrollbar {   
+  background-color: #374b37; /* 滚动条的背景颜色 */
+}
+
+.person_name{
+  text-align: center;
+  font-size: 26px;
+  margin-bottom:10px;
+  font-weight: bold;
+}
+.person_identity{
+  text-align: center;
+  border:solid white 1px;
+  border-radius: 12px;
+  padding: 5px;
+  margin :5px;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  margin-top:80px;
+  font-size:18px;
+}
+footer a{
+  color:white;
+  text-decoration:underline;
+}
+footer a:focus{
+  font-weight: bolder;
+}
+
+
+
+/* 页面宽度小于600px时的响应式布局 */
+@media screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 一行两列 */
+  }
+}
