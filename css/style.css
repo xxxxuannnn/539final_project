@@ -441,14 +441,14 @@
 }
 .ravenclaw_body{
   
-  background-image: url('../images/bg_blue.JPG'); /* 替换为你的图片路径 */
+  background-image: url('../images/bg_blue.jpg'); /* 替换为你的图片路径 */
   background-size: cover; /* 图片铺满整个页面 */
   background-position: center; /* 图片居中 */
   background-repeat: repeat; /* 不重复 */
   
 }
 .ravenclaw_head {
-  background-image: url('../images/head_blue.JPG'); /* 替换为你的图片路径 */
+  background-image: url('../images/head_blue.jpg'); /* 替换为你的图片路径 */
   background-size: cover; /* 图片覆盖整个页面 */
   background-position: top left; /* 背景图片对齐页面的左上角 */
   background-repeat: no-repeat; /* 不重复 */
@@ -457,14 +457,14 @@
 }
 .slytherin_body{
   
-  background-image: url('../images/bg_green.JPG'); /* 替换为你的图片路径 */
+  background-image: url('../images/bg_green.jpg'); /* 替换为你的图片路径 */
   background-size: cover; /* 图片铺满整个页面 */
   background-position: center; /* 图片居中 */
   background-repeat: repeat; /* 不重复 */
   
 }
 .slytherin_head {
-  background-image: url('../images/head_green.JPG'); /* 替换为你的图片路径 */
+  background-image: url('../images/head_green.jpg'); /* 替换为你的图片路径 */
   background-size: cover; /* 图片覆盖整个页面 */
   background-position: top left; /* 背景图片对齐页面的左上角 */
   background-repeat: no-repeat; /* 不重复 */
